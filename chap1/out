@@ -1,0 +1,15 @@
+In file included from main.cpp:1:
+header1.h: In function ‘int header1::func()’:
+header1.h:4:9: error: ‘foo’ was not declared in this scope; did you mean ‘header2::foo’?
+    4 |         foo();
+      |         ^~~
+      |         header2::foo
+In file included from header1.h:1,
+                 from main.cpp:1:
+header2.h:2:10: note: ‘header2::foo’ declared here
+    2 |     void foo();
+      |          ^~~
+In file included from main.cpp:1:
+header1.h:5:18: error: expected unqualified-id before ‘:’ token
+    5 |         header2:::foo();
+      |                  ^
