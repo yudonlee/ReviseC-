@@ -1,0 +1,30 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+assign	my_custom_string.cc	/^string& string::assign(){$/;"	f	class:string
+at	my_custom_string.cc	/^char string::at(const int index){$/;"	f	class:string
+capacity	my_custom_string.cc	/^int string::capacity() const{$/;"	f	class:string
+compare	my_custom_string.cc	/^bool compare(const char* s){$/;"	f
+compare	my_custom_string.cc	/^bool string::compare(const char s){$/;"	f	class:string
+erase	my_custom_string.cc	/^string& string::erase(const int index, const int count){$/;"	f	class:string
+find	my_custom_string.cc	/^int	string::find(const string &s, const int index){$/;"	f	class:string
+find	my_custom_string.cc	/^int string::find(char c, const int index){$/;"	f	class:string
+find	my_custom_string.cc	/^int string::find(const char* s, const int index){	$/;"	f	class:string
+insert	my_custom_string.cc	/^string& string::insert(const char s,const int index){$/;"	f	class:string
+insert	my_custom_string.cc	/^string& string::insert(const char* s,const int index){$/;"	f	class:string
+insert	my_custom_string.cc	/^string& string::insert(const string& s,const int index){$/;"	f	class:string
+len	my_custom_string.cc	/^  int len = 0;$/;"	m	class:string	file:
+main	my_custom_string.cc	/^int main(){$/;"	f
+memory_capacity	my_custom_string.cc	/^	int memory_capacity = 0; $/;"	m	class:string	file:
+reserve	my_custom_string.cc	/^void string::reserve(int size){$/;"	f	class:string
+show_string	my_custom_string.cc	/^void string::show_string(){$/;"	f	class:string
+str	my_custom_string.cc	/^  char *str = nullptr;$/;"	m	class:string	file:
+str_len	my_custom_string.cc	/^int string::str_len() const{$/;"	f	class:string
+string	my_custom_string.cc	/^class string{$/;"	c	file:
+string	my_custom_string.cc	/^string::string(char c){$/;"	f	class:string
+string	my_custom_string.cc	/^string::string(const char *s){$/;"	f	class:string
+string	my_custom_string.cc	/^string::string(const string &s){$/;"	f	class:string
+~string	my_custom_string.cc	/^string::~string(){$/;"	f	class:string

@@ -1,4 +1,5 @@
 #include <iostream>
+#include <map>
 
 class string{
   char *str = nullptr;
@@ -27,6 +28,8 @@ class string{
 	string& insert(const string& s,const int index);
 	string& erase(const int index, const int count);
 
+	bool compare(const char s);
+	bool compare(const char* s);
 	bool compare(const string& s);
   
 	void show_string();
@@ -205,7 +208,56 @@ string& string::erase(const int index, const int count){
 	}
 	return *this;
 }
-//bool compare(const char s);
+bool string::compare(const char s){
+	string temp(s);
+	return compare(temp);
+}
+bool string::compare(const char* s){
+	string temp(s);
+	return compare(temp);
+}
+bool string::compare(const string& s){
+	//사전순 배열로 사용한다. 즉 아스키코드값이다.
+		int i = 0;
+		int s_length = s.str_len();
+		if( len == s_length){
+				while( str[i] == s.str[i] && i < len && i < s_length) 
+					i++;
+				if( i == len)
+					return false ; //two values are same.
+				else{
+						if(str[i] > s.str[i])
+							return true;
+						else
+							return false;
+				}
+		}
+		else{
+				while( str[i] == s.str[i] && i < len && i < s_length)
+					i++;
+				if( i == len -1 || i == s_length -1){
+						if( str[i] == s.str[i]){
+								if(len > s_length)
+									return true;
+								else
+									return false;
+						}
+						else{
+								if(str[i] > s.str[i])
+									return true;
+								else
+									return false;
+						}
+				}
+				else{
+						if(str[i] > s.str[i])
+							return true;
+						else
+							return false;
+				}
+		}
+		//위에 코드들은 모두 level4 이상 넘어가는 코드기때문에 if else를 남발하는 좋은 문장은 아닌거 같다. 하지만 가장 효율적인 것 같아 사용했다.
+}
 void string::show_string(){
   std::cout<<"string is :"<<str<<std::endl;
 }
@@ -215,9 +267,16 @@ int main(){
 	a.show_string();
 	string b("aalalas");
 	b.show_string();
+	std::cout<<"a is than b : "<<a.compare(b)<<std::endl;
 	a.insert("aaabb",1);
 	a.show_string();
+	std::cout<<"a is than b : "<<a.compare(b)<<std::endl;
 	b.erase(3,3);
+	std::cout<<"a is than b : "<<a.compare(b)<<std::endl;
 	b.show_string();
+	string c("aaa");
+	string d("aaaa");
+	std::cout<<"c is than d : "<<c.compare(d)<<std::endl;
+
 	return 0;
 }
