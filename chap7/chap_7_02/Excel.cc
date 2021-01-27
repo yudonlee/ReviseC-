@@ -113,9 +113,10 @@ class CsvTable : public TextTable {
 		return result;
 	}
 };
+
 int main() {
 	CsvTable test(3,3);
-	//TextTable test(3,3);
+	TextTable test1(3,3);
 	test.make_cell("hello");
 	test.make_cell("world");
 	test.make_cell("hahaha");
@@ -124,8 +125,19 @@ int main() {
 	test.make_cell("adsf");
 	test.make_cell("last");
 
+	test1.make_cell("hello");
+	test1.make_cell("world");
+	test1.make_cell("hahaha");
+	test1.make_cell("aas");
+	test1.make_cell("adsf");
+	test1.make_cell("adsf");
+	test1.make_cell("last");
+	
 	std::ofstream file1;
+	std::ofstream file2;
 	file1.open("test.csv");
 	file1 << test;
+	file2.open("test.txt");
+	file2 << test1;
 	return 0;
 }
