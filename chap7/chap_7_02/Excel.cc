@@ -41,6 +41,7 @@ std::ostream& operator<<(std::ostream& o, Table& t) {
 }
 	
 class TextTable : public Table {
+ protected:
 	int max_row, max_col;
 	int index_row, index_col;
  public:
@@ -92,9 +93,29 @@ class TextTable : public Table {
 		}
 	}
 };
+class CsvTable : public TextTable {
 
+ public:
+	CsvTable(int r, int c) : TextTable(r,c) {}
+	std::string print_table() override {
+		std::string result;
+		int _row = index_row;
+		int _col = max_col - 1;
+		for(int i = 0; i <= _row; i++){
+			if(i == _row) 
+				_col = index_col;
+			
+			for(int j = 0; j <= _col; j++) { 
+				result += get_cell_str(i, j) + ",";
+			}
+			result += "\n";
+		}
+		return result;
+	}
+};
 int main() {
-	TextTable test(3,3);
+	CsvTable test(3,3);
+	//TextTable test(3,3);
 	test.make_cell("hello");
 	test.make_cell("world");
 	test.make_cell("hahaha");
