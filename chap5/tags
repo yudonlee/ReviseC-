@@ -1,0 +1,31 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Address	n_dimension_reference.cc	/^	struct Address {$/;"	s	class:MyArray::Array	file:
+Array	n_dimension_reference.cc	/^	Array(const Array &arr) : dim(arr.dim){$/;"	f	class:MyArray::Array
+Array	n_dimension_reference.cc	/^	Array(int dim, int *array_size) : dim(dim){$/;"	f	class:MyArray::Array
+Array	n_dimension_reference.cc	/^class Array {$/;"	c	namespace:MyArray	file:
+Int	n_dimension_reference.cc	/^	Int(const Int& i) : data(i.data), level(i.level), array(i.array){}$/;"	f	class:MyArray::Int
+Int	n_dimension_reference.cc	/^	Int(int index, int _level = 0, void *_data = NULL, $/;"	f	class:MyArray::Int
+Int	n_dimension_reference.cc	/^class Int{$/;"	c	namespace:MyArray	file:
+MyArray	n_dimension_reference.cc	/^namespace MyArray{$/;"	n	file:
+array	n_dimension_reference.cc	/^	Array* array;$/;"	m	class:MyArray::Int	file:
+copy_address	n_dimension_reference.cc	/^void Array::copy_address(Address *dst, Addresss *src){$/;"	f	class:MyArray::Array
+data	n_dimension_reference.cc	/^	void* data;$/;"	m	class:MyArray::Int	file:
+delete_address	n_dimension_reference.cc	/^void Array::delete_address(Address *current){$/;"	f	class:MyArray::Array
+dim	n_dimension_reference.cc	/^	const int dim; \/\/ dimension $/;"	m	class:MyArray::Array	file:
+initialize_address	n_dimension_reference.cc	/^void Array::initialize_address(Address *cureent){$/;"	f	class:MyArray::Array
+level	n_dimension_reference.cc	/^		int level;$/;"	m	struct:MyArray::Array::Address	file:
+level	n_dimension_reference.cc	/^	int level;$/;"	m	class:MyArray::Int	file:
+main	n_dimension_reference.cc	/^int main(){$/;"	f
+next	n_dimension_reference.cc	/^		void *next;$/;"	m	struct:MyArray::Array::Address	file:
+operator =	n_dimension_reference.cc	/^	Int& operator=(const int& a){$/;"	f	class:MyArray::Int
+operator []	n_dimension_reference.cc	/^	Int operator[](const int index){$/;"	f	class:MyArray::Int
+operator []	n_dimension_reference.cc	/^Int Array::operator[](const int index){$/;"	f	class:MyArray::Array
+operator int	n_dimension_reference.cc	/^	operator int(){$/;"	f	class:MyArray::Int
+size	n_dimension_reference.cc	/^	int* size; \/\/storing the size of dimension ex) array[3][2][1].$/;"	m	class:MyArray::Array	file:
+top	n_dimension_reference.cc	/^	Address* top; $/;"	m	class:MyArray::Array	file:
+~Array	n_dimension_reference.cc	/^	~Array(){$/;"	f	class:MyArray::Array

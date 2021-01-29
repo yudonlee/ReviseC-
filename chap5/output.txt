@@ -1,0 +1,71 @@
+n_dimension_reference.cc:37:3: error: invalid use of destructor ‘~MyArray::Array::Iterator’ as a type
+   37 |   ~Iterator{
+      |   ^
+n_dimension_reference.cc: In constructor ‘MyArray::Array::Iterator::Iterator(MyArray::Array*, int*)’:
+n_dimension_reference.cc:30:37: error: expected ‘;’ before ‘)’ token
+   30 |    for(int i = 0; i != arr->dim, i++)
+      |                                     ^
+      |                                     ;
+n_dimension_reference.cc: In copy constructor ‘MyArray::Array::Iterator::Iterator(const MyArray::Array::Iterator&)’:
+n_dimension_reference.cc:34:4: error: ‘locaton’ was not declared in this scope; did you mean ‘location’?
+   34 |    locaton = new int[arr->dim];
+      |    ^~~~~~~
+      |    location
+n_dimension_reference.cc: In member function ‘MyArray::Array::Iterator MyArray::Array::end()’:
+n_dimension_reference.cc:117:10: error: ‘temp’ was not declared in this scope; did you mean ‘mktemp’?
+  117 |   return temp;
+      |          ^~~~
+      |          mktemp
+n_dimension_reference.cc: At global scope:
+n_dimension_reference.cc:195:38: error: cannot define member function ‘MyArray::Array::operator[]’ within ‘MyArray::Int’
+  195 | Int Array::operator[](const int index){
+      |                                      ^
+n_dimension_reference.cc:198:32: error: cannot define member function ‘MyArray::Array::Iterator::operator*’ within ‘MyArray::Int’
+  198 | Int Array::Iterator::operator*(){
+      |                                ^
+n_dimension_reference.cc:205:2: error: expected ‘;’ after class definition
+  205 | }
+      |  ^
+      |  ;
+n_dimension_reference.cc: In constructor ‘MyArray::Int::Int(int, int, void*, MyArray::Array*)’:
+n_dimension_reference.cc:175:74: error: ‘void*’ is not a pointer-to-object type
+  175 |    data = static_cast<void*>(static_cast<int *>(static_cast<Array *>(data->next)+index)); //refer to static_cast_size.cc. you know why this  procedure needs.  }
+      |                                                                          ^~
+n_dimension_reference.cc:178:102: warning: pointer of type ‘void *’ used in arithmetic [-Wpointer-arith]
+  178 |    data = static_cast<void*>(static_cast<Array::Address *>(static_cast<Array::Address *>(data)->next + index));
+      |                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~
+n_dimension_reference.cc:180:5: error: expected primary-expression before ‘(’ token
+  180 |  Int(const Int& i) : data(i.data), level(i.level), array(i.array){}
+      |     ^
+n_dimension_reference.cc:180:6: error: expected primary-expression before ‘const’
+  180 |  Int(const Int& i) : data(i.data), level(i.level), array(i.array){}
+      |      ^~~~~
+n_dimension_reference.cc:181:15: error: ‘operator int’ not defined
+  181 |  operator int(){
+      |               ^
+n_dimension_reference.cc:185:30: error: a function-definition is not allowed here before ‘{’ token
+  185 |  Int& operator=(const int& a){
+      |                              ^
+n_dimension_reference.cc:189:33: error: a function-definition is not allowed here before ‘{’ token
+  189 |  Int operator[](const int index){
+      |                                 ^
+n_dimension_reference.cc: In function ‘int MyArray::main()’:
+n_dimension_reference.cc:213:11: error: no match for ‘operator[]’ (operand types are ‘MyArray::Int’ and ‘int’)
+  213 |     arr[i][j][k] = (i+1) * (j + 1) * (k + 1);
+      |           ^
+n_dimension_reference.cc:220:58: error: no match for ‘operator[]’ (operand types are ‘MyArray::Int’ and ‘int’)
+  220 |     std::cout << i << " " << j << " " << k << " "<<arr[i][j][k]
+      |                                                          ^
+n_dimension_reference.cc:225:10: error: expected ‘}’ at end of input
+  225 |  return 0;
+      |          ^
+n_dimension_reference.cc:206:11: note: to match this ‘{’
+  206 | int main(){
+      |           ^
+n_dimension_reference.cc: At global scope:
+n_dimension_reference.cc:225:10: error: expected ‘}’ at end of input
+  225 |  return 0;
+      |          ^
+n_dimension_reference.cc:2:18: note: to match this ‘{’
+    2 | namespace MyArray{
+      |                  ^
