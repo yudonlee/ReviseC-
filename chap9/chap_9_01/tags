@@ -1,0 +1,35 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Vector	template.cc	/^	Vector(int n = 1) : data(new T[n]), capacity(n), length(0) {}$/;"	f	class:Vector
+Vector	template.cc	/^class Vector {$/;"	c	file:
+Vector	template_specialization.cc	/^	Vector(int n = 1) : data(new T[n]), capacity(n), length(0) {}$/;"	f	class:Vector
+Vector	template_specialization.cc	/^	Vector(int n = 1) : data(new unsigned int[n\/32 + 1]), capacity(n \/ 32 + 1), length(0) {$/;"	f	class:Vector
+Vector	template_specialization.cc	/^class Vector {$/;"	c	file:
+Vector	template_specialization.cc	/^class Vector<bool> {$/;"	c	file:
+capacity	template.cc	/^	int capacity;$/;"	m	class:Vector	file:
+capacity	template_specialization.cc	/^	int capacity;$/;"	m	class:Vector	file:
+data	template.cc	/^	T* data;$/;"	m	class:Vector	file:
+data	template_specialization.cc	/^	T* data;$/;"	m	class:Vector	file:
+data	template_specialization.cc	/^	unsigned int* data;$/;"	m	class:Vector	file:
+length	template.cc	/^	int length;$/;"	m	class:Vector	file:
+length	template_specialization.cc	/^	int length;$/;"	m	class:Vector	file:
+main	template.cc	/^int main() {$/;"	f
+main	template_specialization.cc	/^int main() {$/;"	f
+operator []	template.cc	/^	T operator[](int i) { return data[i]; }$/;"	f	class:Vector
+operator []	template_specialization.cc	/^	T operator[](int i) { return data[i]; }$/;"	f	class:Vector
+operator []	template_specialization.cc	/^	bool operator[](int i) { $/;"	f	class:Vector
+push_back	template.cc	/^	void push_back(T s) {$/;"	f	class:Vector
+push_back	template_specialization.cc	/^	void push_back(T s) {$/;"	f	class:Vector
+push_back	template_specialization.cc	/^	void push_back(bool s) {$/;"	f	class:Vector
+remove	template.cc	/^	void remove(int x) {$/;"	f	class:Vector
+remove	template_specialization.cc	/^	void remove(int x) {$/;"	f	class:Vector
+size	template.cc	/^	int size() { return length; }$/;"	f	class:Vector
+size	template_specialization.cc	/^	int size() { return length; }$/;"	f	class:Vector
+value_type	template_specialization.cc	/^	typedef T value_type;$/;"	t	class:Vector	file:
+value_type	template_specialization.cc	/^	typedef bool value_type;$/;"	t	class:Vector	file:
+~Vector	template.cc	/^	~Vector() {$/;"	f	class:Vector
+~Vector	template_specialization.cc	/^	~Vector() {$/;"	f	class:Vector
